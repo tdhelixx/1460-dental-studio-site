@@ -1,0 +1,13 @@
+collections_config:
+  pages:
+    filter: strict
+    output: true
+    path: .
+data_config:
+  navigation:
+    path: _data/navigation.yml
+editor:
+  default_path: /
+source: .
+uploads:
+  path: assets/images

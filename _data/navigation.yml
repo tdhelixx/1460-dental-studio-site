@@ -1,0 +1,240 @@
+footer_navigation:
+- &id001
+  title: Blog
+  url: /for-patients_blog/
+  weight: 0
+- &id002
+  title: Membership Plans
+  url: /for-patients_membership/
+  weight: 0
+- &id003
+  title: Patient Resources
+  url: /for-patients_patient-resources/
+  weight: 0
+- &id004
+  title: Transparent, Local Dentist in Georgetown
+  url: /post_transparent-local-dentist-in-georgetown/
+  weight: 0
+- &id005
+  title: 1460 Dental StudioPrivacy Policy
+  url: /privacy-policy/
+  weight: 0
+- &id006
+  title: OBDS | 1460 Dental Studio
+  url: /team-members_queen-ledner/
+  weight: 0
+- &id007
+  title: OBDS | 1460 Dental Studio
+  url: /team-members_raphaelle-kemmer/
+  weight: 0
+- &id008
+  title: OBDS | 1460 Dental Studio
+  url: /team-members_ryleigh-altenwerth/
+  weight: 0
+- &id009
+  title: OBDS | 1460 Dental Studio
+  url: /team-members_stuart-schuster/
+  weight: 0
+- &id010
+  title: OBDS | 1460 Dental Studio
+  url: /team-members_trent-romaguera/
+  weight: 0
+- &id011
+  title: 1460 Dental StudioTerms And Conditions
+  url: /terms-and-conditions/
+  weight: 0
+- &id012
+  title: Thank You
+  url: /thank-you/
+  weight: 0
+- &id013
+  title: Dentist in Georgetown | 1460 Dental Studio
+  url: /
+  weight: 1
+- &id014
+  title: About Us
+  url: /about/
+  weight: 2
+- &id015
+  title: Cosmetic Dentistry In Georgetown, TX
+  url: /service-categories_cosmetic-dentistry/
+  weight: 3
+- &id016
+  title: Preventive DentistryIn Georgetown, TX
+  url: /service-categories_preventive-dentistry/
+  weight: 3
+- &id017
+  title: Restorative Dentistry In Georgetown, TX
+  url: /service-categories_restorative-dentistry/
+  weight: 3
+- &id018
+  title: At-Home Teeth WhiteningIn Georgetown, TX
+  url: /services_at-home-teeth-whitening/
+  weight: 3
+- &id019
+  title: Botox and FillersIn Georgetown, TX
+  url: /services_botox-and-fillers/
+  weight: 3
+- &id020
+  title: Botox for TMJIn Georgetown, TX
+  url: /services_botox-for-tmj/
+  weight: 3
+- &id021
+  title: Cleaning & HygieneIn Georgetown, TX
+  url: /services_cleaning-hygiene/
+  weight: 3
+- &id022
+  title: Clear Aligners In Georgetown, TX
+  url: /services_clear-aligners/
+  weight: 3
+- &id023
+  title: Dental BondingIn Georgetown, TX
+  url: /services_dental-bonding/
+  weight: 3
+- &id024
+  title: Dental BridgesIn Georgetown, TX
+  url: /services_dental-bridges/
+  weight: 3
+- &id025
+  title: Dental CrownsIn Georgetown, TX
+  url: /services_dental-crowns/
+  weight: 3
+- &id026
+  title: Dental FillingsIn Georgetown, TX
+  url: /services_dental-fillings/
+  weight: 3
+- &id027
+  title: Dental Implants In Georgetown, TX
+  url: /services_dental-implants/
+  weight: 3
+- &id028
+  title: Dental SealantsIn Georgetown, TX
+  url: /services_dental-sealants/
+  weight: 3
+- &id029
+  title: DenturesIn Georgetown, TX
+  url: /services_dentures/
+  weight: 3
+- &id030
+  title: Diagnostic & PreventionIn Georgetown, TX
+  url: /services_diagnostic-prevention/
+  weight: 3
+- &id031
+  title: Digital X-RaysIn Georgetown, TX
+  url: /services_digital-xrays/
+  weight: 3
+- &id032
+  title: Emergencies In Georgetown, TX
+  url: /services_emergencies/
+  weight: 3
+- &id033
+  title: EnameloplastyIn Georgetown, TX
+  url: /services_enameloplasty/
+  weight: 3
+- &id034
+  title: ExtractionsIn Georgetown, TX
+  url: /services_extractions/
+  weight: 3
+- &id035
+  title: Fluoride TreatmentsIn Georgetown, TX
+  url: /services_fluoride-treatments/
+  weight: 3
+- &id036
+  title: Implant-Retained DenturesIn Georgetown, TX
+  url: /services_implant-retained-dentures/
+  weight: 3
+- &id037
+  title: In-Office Teeth WhiteningIn Georgetown, TX
+  url: /services_in-office-teeth-whitening/
+  weight: 3
+- &id038
+  title: InvisalignIn Georgetown, TX
+  url: /services_invisalign/
+  weight: 3
+- &id039
+  title: Night GuardsIn Georgetown, TX
+  url: /services_night-guards/
+  weight: 3
+- &id040
+  title: Oral Cancer ScreeningsIn Georgetown, TX
+  url: /services_oral-cancer-screenings/
+  weight: 3
+- &id041
+  title: Partial DenturesIn Georgetown, TX
+  url: /services_partial-dentures/
+  weight: 3
+- &id042
+  title: Periodontal CareIn Georgetown, TX
+  url: /services_periodontal-care/
+  weight: 3
+- &id043
+  title: Root Canal Therapy In Georgetown, TX
+  url: /services_root-canal-therapy/
+  weight: 3
+- &id044
+  title: Teeth WhiteningIn Georgetown, TX
+  url: /services_teeth-whitening/
+  weight: 3
+- &id045
+  title: TMJ/TMD TreatmentIn Georgetown, TX
+  url: /services_tmj-tmd-treatment/
+  weight: 3
+- &id046
+  title: Veneers In Georgetown, TX
+  url: /services_veneers/
+  weight: 3
+- &id047
+  title: Wisdom Teeth RemovalIn Georgetown, TX
+  url: /services_wisdom-teeth-removal/
+  weight: 3
+main_navigation:
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+- *id006
+- *id007
+- *id008
+- *id009
+- *id010
+- *id011
+- *id012
+- *id013
+- *id014
+- *id015
+- *id016
+- *id017
+- *id018
+- *id019
+- *id020
+- *id021
+- *id022
+- *id023
+- *id024
+- *id025
+- *id026
+- *id027
+- *id028
+- *id029
+- *id030
+- *id031
+- *id032
+- *id033
+- *id034
+- *id035
+- *id036
+- *id037
+- *id038
+- *id039
+- *id040
+- *id041
+- *id042
+- *id043
+- *id044
+- *id045
+- *id046
+- *id047
+- title: Contact
+  url: /contact/
+  weight: 10
