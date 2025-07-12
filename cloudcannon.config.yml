@@ -1,12 +1,34 @@
+_inputs:
+  description:
+    type: textarea
+  title:
+    type: text
 collections_config:
   pages:
     filter: strict
     output: true
+    parse_branch_index: true
     path: .
+  service_categories:
+    name: Service Categories
+    output: true
+    path: service-categories_*
+  services:
+    name: Services
+    output: true
+    path: services_*
 data_config:
   navigation:
     path: _data/navigation.yml
 editor:
+  default_editor_config:
+    content:
+      bold: true
+      format: p h1 h2 h3 h4 h5 h6 pre address div
+      italic: true
+      link: true
+      redo: true
+      undo: true
   default_path: /
 source: .
 uploads:
