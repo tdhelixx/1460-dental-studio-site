@@ -10,7 +10,8 @@ collections_config:
   pages:
     path: src/pages
     output: true
-    filter: strict
+    filter: 
+      - "**/*.astro"
     name: "Pages"
     description: "Main website pages"
     icon: "description"
@@ -44,6 +45,21 @@ collections_config:
                 - "BaseLayout"
               default: "BaseLayout"
             hidden: true
+    _inputs:
+      title:
+        type: text
+        label: "Page Title"
+        comment: "The main title for this page"
+      description:
+        type: textarea
+        label: "Meta Description"
+        comment: "SEO description for search engines"
+
+# Explicit Page Definitions
+paths:
+  pages: src/pages
+  static: public
+  uploads: public/images
 
 # Data Configuration  
 data_config:
