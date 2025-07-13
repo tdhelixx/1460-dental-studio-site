@@ -46,64 +46,44 @@ const services = [
 ];
 ---
 
-<section class="py-24 bg-surface-50 dark:bg-surface-950">
-  <div class="container mx-auto px-4">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-surface-900 dark:text-surface-100 editable">
-        Comprehensive Dental Services
-      </h2>
-      <p class="text-xl text-surface-600 dark:text-surface-400 max-w-3xl mx-auto editable">
-        From routine cleanings to complex procedures, we provide complete dental care 
-        using the latest technology and techniques to ensure your comfort and satisfaction.
-      </p>
+<section class="section">
+  <div class="container">
+    <h2>Our Services</h2>
+    
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>General Dentistry</h3>
+        <p>Comprehensive dental care including cleanings, fillings, and preventive treatments.</p>
+      </div>
+      
+      <div class="card">
+        <h3>Cosmetic Dentistry</h3>
+        <p>Enhance your smile with veneers, teeth whitening, and cosmetic procedures.</p>
+      </div>
+      
+      <div class="card">
+        <h3>Dental Implants</h3>
+        <p>Permanent tooth replacement solutions for missing or damaged teeth.</p>
+      </div>
+      
+      <div class="card">
+        <h3>Orthodontics</h3>
+        <p>Straighten your teeth with traditional braces or clear aligners.</p>
+      </div>
+      
+      <div class="card">
+        <h3>Emergency Care</h3>
+        <p>Same-day appointments for dental emergencies and urgent care.</p>
+      </div>
+      
+      <div class="card">
+        <h3>Pediatric Dentistry</h3>
+        <p>Specialized dental care for children in a comfortable environment.</p>
+      </div>
     </div>
     
-    <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {services.map((service) => (
-        <div class="service-card group">
-          <div class="text-4xl mb-4">{service.icon}</div>
-          
-          <h3 class="editable">{service.title}</h3>
-          
-          <p class="editable mb-6">{service.description}</p>
-          
-          <!-- Features -->
-          <div class="mb-6">
-            <ul class="space-y-2">
-              {service.features.map((feature) => (
-                <li class="flex items-center text-sm text-surface-600 dark:text-surface-400">
-                  <svg class="w-4 h-4 mr-2 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                  </svg>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <!-- CTA -->
-          <div class="mt-auto">
-            <a 
-              href={service.href}
-              class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium group-hover:translate-x-1 transition-transform"
-            >
-              Learn More
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      ))}
-    </div>
-    
-    <!-- Call to Action -->
-    <div class="text-center mt-16">
-      <a href="/services/" class="btn-primary text-lg px-8 py-4 inline-block">
-        View All Services
-      </a>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/services" class="btn btn-primary">View All Services</a>
     </div>
   </div>
 </section> 
