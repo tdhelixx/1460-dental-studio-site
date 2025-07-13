@@ -1,7 +1,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import '@skeletonlabs/skeleton/themes/cerberus';
 
 /* Custom styles for dental practice */
 .editable {
