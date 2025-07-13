@@ -18,6 +18,9 @@ export default defineConfig({
   vite: {
     optimizeDeps: {
       include: ['@skeletonlabs/skeleton']
+    },
+    ssr: {
+      noExternal: ['@skeletonlabs/skeleton']
     }
   }
 }); 

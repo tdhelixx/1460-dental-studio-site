@@ -1,5 +1,6 @@
 ---
 import '../app.css';
+import SkeletonInit from '../components/SkeletonInit.svelte';
 
 export interface Props {
   title: string;
@@ -33,6 +34,7 @@ const { title, description = "Trusted Georgetown dentist offering compassionate,
   <meta name="twitter:description" content={description} />
 </head>
 <body>
+  <SkeletonInit client:load />
   <div id="app" class="relative flex flex-col min-h-screen">
     <slot />
   </div>
