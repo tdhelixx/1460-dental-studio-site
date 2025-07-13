@@ -1,48 +1,72 @@
-_collection_groups:
-- collections:
-  - all_pages
-  heading: Content Management
-- collections:
-  - services
-  - service_categories
-  - patient_pages
-  - team_members
-  heading: By Category
+_schema: _schema
+source: .
+collections_config:
+  all_pages:
+    path: .
+    glob:
+      - '**/*.html'
+      - '!_*/**'
+    name: All Pages
+    icon: notes
+    disable_url: false
+    description: ''
+    _enabled_editors:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  patient_pages:
+    path: for-patients
+    name: Patient Pages
+    icon: notes
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  service_categories:
+    path: service-categories
+    name: Service Categories
+    icon: notes
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  services:
+    path: services
+    name: Services
+    icon: notes
+    disable_url: false
+    description: ''
+    preview:
+      text:
+      subtext:
+      icon:
+      icon_color:
+      image:
+      metadata:
+        - text:
+          icon:
+          icon_color:
+          image:
+      gallery:
+    _enabled_editors:
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  team_members:
+    path: team-members
+    name: Team Members
+    icon: notes
+    disable_url: false
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
 _inputs:
   description:
     type: textarea
+    cascade: true
   title:
     type: text
-collections_config:
-  all_pages:
-    filter: strict
-    glob:
-    - '**/*.html'
-    - '!_*/**'
-    name: All Pages
-    output: true
-    parse_branch_index: true
-    path: .
-  patient_pages:
-    name: Patient Pages
-    output: true
-    parse_branch_index: true
-    path: for-patients
-  service_categories:
-    name: Service Categories
-    output: true
-    parse_branch_index: true
-    path: service-categories
-  services:
-    name: Services
-    output: true
-    parse_branch_index: true
-    path: services
-  team_members:
-    name: Team Members
-    output: true
-    parse_branch_index: true
-    path: team-members
+    cascade: true
 data_config:
   navigation:
     path: _data/navigation.yml
@@ -56,6 +80,16 @@ editor:
       redo: true
       undo: true
   default_path: /
-source: .
+timezone: Etc/UTC
+_collection_groups:
+  - collections:
+      - all_pages
+    heading: Content Management
+  - collections:
+      - services
+      - service_categories
+      - patient_pages
+      - team_members
+    heading: By Category
 uploads:
   path: assets/images
