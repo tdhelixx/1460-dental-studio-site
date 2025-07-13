@@ -1,0 +1,78 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-surface-200 dark:bg-surface-900 text-surface-800 dark:text-surface-100">
+  <div class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Practice Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-primary-700 dark:text-primary-300">1460 Dental Studio</h3>
+        <address class="not-italic text-sm space-y-2">
+          <p>1460 Scenic Drive<br>Georgetown, TX 78626</p>
+          <p>
+            <a href="tel:+15128639438" class="hover:text-primary-600 dark:hover:text-primary-400">
+              (512) 863-9438
+            </a>
+          </p>
+          <p>
+            <a href="mailto:info@1460dentalstudio.com" class="hover:text-primary-600 dark:hover:text-primary-400">
+              info@1460dentalstudio.com
+            </a>
+          </p>
+        </address>
+      </div>
+      
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-primary-700 dark:text-primary-300">Services</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="/services/dental-implants/" class="hover:text-primary-600 dark:hover:text-primary-400">Dental Implants</a></li>
+          <li><a href="/services/veneers/" class="hover:text-primary-600 dark:hover:text-primary-400">Veneers</a></li>
+          <li><a href="/services/teeth-whitening/" class="hover:text-primary-600 dark:hover:text-primary-400">Teeth Whitening</a></li>
+          <li><a href="/services/invisalign/" class="hover:text-primary-600 dark:hover:text-primary-400">Invisalign</a></li>
+          <li><a href="/services/emergencies/" class="hover:text-primary-600 dark:hover:text-primary-400">Emergency Care</a></li>
+          <li><a href="/services/" class="hover:text-primary-600 dark:hover:text-primary-400">View All Services</a></li>
+        </ul>
+      </div>
+      
+      <!-- Patient Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-primary-700 dark:text-primary-300">For Patients</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="/for-patients/new-patients/" class="hover:text-primary-600 dark:hover:text-primary-400">New Patients</a></li>
+          <li><a href="/for-patients/forms/" class="hover:text-primary-600 dark:hover:text-primary-400">Patient Forms</a></li>
+          <li><a href="/for-patients/payment-options/" class="hover:text-primary-600 dark:hover:text-primary-400">Payment Options</a></li>
+          <li><a href="/for-patients/insurance/" class="hover:text-primary-600 dark:hover:text-primary-400">Insurance</a></li>
+          <li><a href="/contact/" class="hover:text-primary-600 dark:hover:text-primary-400">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <!-- Office Hours -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-primary-700 dark:text-primary-300">Office Hours</h3>
+        <div class="text-sm space-y-2">
+          <p><strong>Monday - Thursday:</strong><br>8:00 AM - 5:00 PM</p>
+          <p><strong>Friday:</strong><br>8:00 AM - 2:00 PM</p>
+          <p><strong>Saturday - Sunday:</strong><br>Closed</p>
+        </div>
+        
+        <div class="mt-6">
+          <a href="/contact/" class="btn-primary inline-block">
+            Schedule Appointment
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <hr class="my-8 border-surface-300 dark:border-surface-700">
+    
+    <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+      <p>&copy; {currentYear} 1460 Dental Studio. All rights reserved.</p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="/privacy-policy/" class="hover:text-primary-600 dark:hover:text-primary-400">Privacy Policy</a>
+        <a href="/terms-and-conditions/" class="hover:text-primary-600 dark:hover:text-primary-400">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer> 

@@ -1,0 +1,46 @@
+---
+import '@skeletonlabs/skeleton/styles/all.css';
+import '../app.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Trusted Georgetown dentist offering compassionate, expert dental care for your whole family." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="generator" content={Astro.generator} />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- SEO -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+</head>
+<body>
+  <div id="app" class="relative flex flex-col min-h-screen">
+    <slot />
+  </div>
+  
+  <script>
+    import { initializeSkeletonUI } from '@skeletonlabs/skeleton';
+    initializeSkeletonUI();
+  </script>
+</body>
+</html> 
