@@ -1,0 +1,30 @@
+# Editable page content for CloudCannon
+homepage:
+  title: "Dentist in Georgetown | 1460 Dental Studio"
+  description: "Trusted Georgetown dentist offering compassionate, expert dental care for your whole family. Book your appointment today!"
+  hero:
+    headline: "Your Georgetown Smile Experts"
+    tagline: "Compassionate, expert dental care for your whole family"
+    cta_text: "Schedule Appointment"
+    cta_link: "/contact/"
+
+about:
+  title: "About | 1460 Dental Studio"
+  description: "Learn more about our experienced Georgetown dental team and commitment to exceptional care. Meet your local smile experts today!"
+  hero:
+    headline: "About 1460 Dental Studio"
+    tagline: "Your trusted Georgetown dental team providing exceptional care since 2009."
+
+services:
+  title: "Dental Services | 1460 Dental Studio"
+  description: "Comprehensive dental services in Georgetown, TX including general dentistry, cosmetic dentistry, dental implants, and emergency care."
+  hero:
+    headline: "Our Dental Services"
+    tagline: "Comprehensive dental care for you and your family in Georgetown, Texas."
+
+contact:
+  title: "Contact Us | 1460 Dental Studio"
+  description: "Contact 1460 Dental Studio in Georgetown, TX. Schedule your appointment today! Call (512) 763-5774."
+  hero:
+    headline: "Contact 1460 Dental Studio" 
+    tagline: "Schedule your appointment or get in touch with our Georgetown dental team." 

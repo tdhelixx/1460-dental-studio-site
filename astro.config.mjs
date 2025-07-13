@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import svelte from '@astrojs/svelte';
 import tailwind from '@astrojs/tailwind';
+import yaml from '@rollup/plugin-yaml';
 
 export default defineConfig({
   integrations: [
@@ -15,4 +16,7 @@ export default defineConfig({
   },
   site: 'https://1460dentalstudio.com',
   compressHTML: true,
+  vite: {
+    plugins: [yaml()]
+  }
 }); 

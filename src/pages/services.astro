@@ -7,16 +7,23 @@ const layout = "BaseLayout";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.svelte';
 import Footer from '../components/Footer.astro';
+
+// Import data from CloudCannon editable files
+import siteData from '../../data/site.yml';
+import pageData from '../../data/pages.yml';
+
+// Get page content
+const pageContent = pageData.services;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={pageContent.title} description={pageContent.description}>
   <Navigation client:load />
   
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Our Dental Services</h1>
-        <p>Comprehensive dental care for you and your family in Georgetown, Texas.</p>
+        <h1>{pageContent.hero.headline}</h1>
+        <p>{pageContent.hero.tagline}</p>
       </div>
     </section>
     

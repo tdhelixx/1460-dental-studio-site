@@ -1,71 +1,51 @@
 # CloudCannon Configuration for 1460 Dental Studio
-source: src
+source: .
 public_path: /
 output_dir: dist
 build_dir: dist
 base_url: /
 
-# Collections Configuration
+# Build Configuration
+build:
+  output_dir: dist
+  install_command: "npm install"
+  build_command: "npm run build"
+  preview_command: "npm run preview"
+
+# Collections Configuration - Data-driven approach
 collections_config:
-  pages:
-    path: src/pages
-    output: true
-    filter: 
-      - "**/*.astro"
-    name: "Pages"
-    description: "Main website pages"
-    icon: "description"
+  data:
+    path: data
+    output: false
+    name: "Site Data"
+    description: "Editable site data and content"
+    icon: "settings"
     _enabled_editors:
-      - visual
-      - content
-      - source
-    add_options:
-      - name: "Add New Page"
-        schema: page
-        icon: "add"
-    schemas:
-      page:
-        name: "Standard Page"
-        description: "A standard website page"
-        icon: "description"
-        _inputs:
-          title:
-            type: text
-            label: "Page Title"
-            comment: "The main title for this page"
-          description:
-            type: textarea
-            label: "Meta Description"
-            comment: "SEO description for search engines"
-          layout:
-            type: select
-            label: "Page Layout"
-            options:
-              values:
-                - "BaseLayout"
-              default: "BaseLayout"
-            hidden: true
+      - data
     _inputs:
       title:
         type: text
-        label: "Page Title"
-        comment: "The main title for this page"
+        label: "Site Title"
       description:
         type: textarea
-        label: "Meta Description"
-        comment: "SEO description for search engines"
-
-# Explicit Page Definitions
-paths:
-  pages: src/pages
-  static: public
-  uploads: public/images
+        label: "Site Description"
+      phone:
+        type: text
+        label: "Phone Number"
+      email:
+        type: email
+        label: "Email Address"
 
 # Data Configuration  
 data_config:
-  site_settings:
-    path: src/data/site.yml
+  site:
+    path: data/site.yml
     name: "Site Settings"
+    _enabled_editors:
+      - data
+  pages:
+    path: data/pages.yml
+    name: "Page Content"
     _enabled_editors:
       - data
 
@@ -74,97 +54,49 @@ _inputs:
   title:
     type: text
     label: "Title"
-    comment: "The page title"
   description:
     type: textarea
-    label: "Description" 
-    comment: "Page description for SEO"
-  image:
-    type: image
-    label: "Image"
-    comment: "Featured image"
-  content:
-    type: rich_text
-    label: "Content"
-    comment: "Main page content"
+    label: "Description"
+  headline:
+    type: text
+    label: "Headline"
+  tagline:
+    type: text
+    label: "Tagline"
+  phone:
+    type: text
+    label: "Phone Number"
+    comment: "Format: (512) 123-4567"
+  email:
+    type: email
+    label: "Email Address"
+  street:
+    type: text
+    label: "Street Address"
+  city:
+    type: text
+    label: "City"
+  state:
+    type: text
+    label: "State"
+  zip:
+    type: text
+    label: "ZIP Code"
 
 # Editor Configuration
 _enabled_editors:
-  - visual
-  - content
+  - data
   - source
 
-# Build Configuration
-build:
-  output_dir: dist
-  install_command: "npm install"
-  build_command: "npm run build"
-  preview_command: "npm run preview"
-  environment_variables:
-    NODE_ENV: production
-
-# Generator Configuration  
-generator:
-  metadata:
-    markdown: markdown-it
-    markdown-it:
-      html: true
-      breaks: true
-      linkify: true
-
-# Markdown Configuration
-markdown:
-  engine: markdown-it
-  markdown-it:
-    html: true
-    breaks: true
-    linkify: true
-    typographer: true
-
-# Visual Editor Configuration
-_editables:
-  text:
-    format: p h1 h2 h3 h4 h5 h6
-    bold: true
-    italic: true
-    underline: true
-    strike: true
-    link: true
-    subscript: true
-    superscript: true
-    code: true
-    undo: true
-    redo: true
-  block:
-    format: p h1 h2 h3 h4 h5 h6 blockquote
-    bold: true
-    italic: true
-    underline: true
-    strike: true
-    link: true
-    alignment: left center right justify
-    lists: true
-    indent: true
-    outdent: true
-    image: true
-    embed: true
-    table: true
-    horizontalrule: true
-    undo: true
-    redo: true
-    removeformat: true
-    copyformatting: true
+# Paths Configuration
+paths:
+  data: data
+  static: public
+  uploads: public/images
 
 # Site Configuration
 timezone: America/Chicago
 locale: en-US
-
-# SEO Configuration
-seo:
-  title: "1460 Dental Studio"
-  description: "Learn more about our experienced Georgetown dental team and commitment to exceptional care. Meet your local smile experts today!"
-  image: /images/og-image.jpg
-  url: https://1460dentalstudio.com
 
 # Asset Configuration
 uploads_dir: public/images
