@@ -1,7 +1,122 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import '@skeletonlabs/skeleton';
+
+/* Custom component styles for 1460 Dental Studio */
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-dental-blue-600 hover:bg-dental-blue-700 text-white focus:ring-dental-blue-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 focus:ring-gray-500;
+  }
+  
+  .btn-lg {
+    @apply px-6 py-3 text-lg;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg;
+  }
+  
+  .card-body {
+    @apply p-6;
+  }
+  
+  .card-header {
+    @apply p-6 pb-4 border-b border-gray-200 dark:border-gray-700;
+  }
+  
+  .card-footer {
+    @apply p-6 pt-4 border-t border-gray-200 dark:border-gray-700;
+  }
+  
+  /* Service card specific styles */
+  .service-card {
+    @apply card hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  .service-card:hover {
+    @apply scale-105 transition-transform duration-300;
+  }
+  
+  /* Navigation styles */
+  .nav-link {
+    @apply block px-3 py-2 rounded-md text-base font-medium transition-colors;
+  }
+  
+  .nav-link:hover {
+    @apply bg-gray-100 dark:bg-gray-700;
+  }
+  
+  .nav-link.active {
+    @apply bg-dental-blue-100 dark:bg-dental-blue-900 text-dental-blue-800 dark:text-dental-blue-200;
+  }
+  
+  /* Hero section styles */
+  .hero-section {
+    @apply bg-gradient-to-br from-dental-blue-50 to-dental-green-50 dark:from-gray-900 dark:to-gray-800;
+  }
+  
+  /* Form styles */
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-dental-blue-500 focus:border-dental-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
+  }
+  
+  /* Testimonial styles */
+  .testimonial-card {
+    @apply card p-6 text-center;
+  }
+  
+  .testimonial-quote {
+    @apply text-lg italic text-gray-600 dark:text-gray-400 mb-4;
+  }
+  
+  .testimonial-author {
+    @apply font-semibold text-gray-800 dark:text-gray-200;
+  }
+  
+  /* Contact section styles */
+  .contact-item {
+    @apply flex items-center space-x-3 p-4 rounded-lg bg-gray-50 dark:bg-gray-700;
+  }
+  
+  .contact-icon {
+    @apply w-6 h-6 text-dental-blue-600;
+  }
+  
+  /* Footer styles */
+  .footer-section {
+    @apply bg-gray-900 text-white py-12;
+  }
+  
+  .footer-content {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .footer-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+  }
+  
+  .footer-title {
+    @apply text-lg font-semibold mb-4;
+  }
+  
+  .footer-link {
+    @apply block text-gray-300 hover:text-white transition-colors mb-2;
+  }
+}
 
 /* Custom styles for dental practice */
 .editable {
@@ -9,7 +124,7 @@
 }
 
 .editable:hover {
-  @apply bg-opacity-10 bg-primary-500;
+  @apply bg-opacity-10 bg-dental-blue-500;
 }
 
 /* Typography */
@@ -21,71 +136,7 @@ body {
   @apply font-body;
 }
 
-/* Button styles */
-.btn-primary {
-  @apply bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors;
-}
-
-.btn-secondary {
-  @apply bg-secondary-200 hover:bg-secondary-300 text-secondary-800 px-6 py-3 rounded-lg transition-colors;
-}
-
-/* Card styles */
-.card {
-  @apply bg-surface-100 dark:bg-surface-800 rounded-lg shadow-lg;
-}
-
-/* Service card specific styles */
-.service-card {
-  @apply card p-6 hover:shadow-xl transition-shadow;
-}
-
-.service-card h3 {
-  @apply text-xl font-semibold mb-3 text-primary-700 dark:text-primary-300;
-}
-
-.service-card p {
-  @apply text-surface-600 dark:text-surface-300;
-}
-
-/* Navigation styles */
-.nav-link {
-  @apply text-surface-700 dark:text-surface-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors;
-}
-
-/* Hero section */
-.hero {
-  @apply bg-gradient-to-r from-primary-600 to-primary-800 text-white;
-}
-
-/* Form styles */
-.form-input {
-  @apply bg-surface-100 dark:bg-surface-800 border border-surface-300 dark:border-surface-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-/* Responsive utilities */
-@media (max-width: 768px) {
-  .hero h1 {
-    @apply text-3xl;
-  }
-  
-  .service-card {
-    @apply p-4;
-  }
+/* Dark mode */
+.dark {
+  @apply bg-gray-900 text-white;
 } 
