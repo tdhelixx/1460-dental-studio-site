@@ -43,7 +43,9 @@ export default {
   },
   plugins: [
     skeleton({
-      themes: { preset: ['skeleton', 'wintry', 'modern', 'hamlindigo'] }
+      themes: { 
+        preset: ['skeleton', 'wintry', 'modern', 'hamlindigo', 'cerberus'] 
+      }
     }),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography')
