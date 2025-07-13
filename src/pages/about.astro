@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.svelte';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="About Us - 1460 Dental Studio" description="Learn about our experienced dental team and state-of-the-art facility in Georgetown, TX.">
+  <Navigation client:load />
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>About 1460 Dental Studio</h1>
+        <p>Your trusted Georgetown dental team providing exceptional care since 2009.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>Our Story</h2>
+            <p>1460 Dental Studio has been serving the Georgetown community for over 15 years. We believe that everyone deserves access to high-quality dental care in a comfortable, welcoming environment.</p>
+            
+            <p>Our team of experienced professionals is dedicated to providing comprehensive dental services using the latest technology and techniques. We take the time to understand each patient's unique needs and develop personalized treatment plans.</p>
+            
+            <h3>Our Mission</h3>
+            <p>To provide exceptional dental care that improves our patients' oral health, overall well-being, and quality of life. We are committed to creating positive dental experiences in a comfortable, state-of-the-art environment.</p>
+          </div>
+          
+          <div>
+            <h3>Our Values</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 16px;">
+                <strong>Compassionate Care:</strong> We treat every patient with kindness and understanding
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong>Excellence:</strong> We maintain the highest standards in everything we do
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong>Innovation:</strong> We use the latest technology for better outcomes
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong>Education:</strong> We empower patients with knowledge about their oral health
+              </li>
+              <li style="margin-bottom: 16px;">
+                <strong>Community:</strong> We are proud to serve Georgetown and surrounding areas
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Dr. Sarah Smith</h3>
+            <p><strong>Lead Dentist & Practice Owner</strong></p>
+            <p>Dr. Smith has over 15 years of experience in general and cosmetic dentistry. She graduated from UT Health San Antonio Dental School and is committed to continuing education.</p>
+          </div>
+          
+          <div class="card">
+            <h3>Dr. Michael Johnson</h3>
+            <p><strong>Associate Dentist</strong></p>
+            <p>Dr. Johnson specializes in restorative dentistry and dental implants. He brings 10 years of experience and a gentle approach to patient care.</p>
+          </div>
+          
+          <div class="card">
+            <h3>Lisa Martinez, RDH</h3>
+            <p><strong>Lead Dental Hygienist</strong></p>
+            <p>Lisa has been with our practice for 8 years and is passionate about preventive care and patient education. She makes every cleaning comfortable and thorough.</p>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="/contact" class="btn btn-primary">Schedule Your Appointment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout> 

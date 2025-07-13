@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.svelte';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Dental Services - 1460 Dental Studio" description="Comprehensive dental services in Georgetown, TX including general dentistry, cosmetic dentistry, dental implants, and emergency care.">
+  <Navigation client:load />
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Our Dental Services</h1>
+        <p>Comprehensive dental care for you and your family in Georgetown, Texas.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <h2>General Dentistry</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Routine Cleanings</h3>
+            <p>Professional dental cleanings every 6 months to maintain optimal oral health and prevent dental problems.</p>
+            <ul style="margin-top: 16px;">
+              <li>Plaque and tartar removal</li>
+              <li>Polishing and fluoride treatment</li>
+              <li>Oral health assessment</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Dental Exams</h3>
+            <p>Comprehensive dental examinations to detect issues early and maintain your oral health.</p>
+            <ul style="margin-top: 16px;">
+              <li>Digital X-rays</li>
+              <li>Oral cancer screening</li>
+              <li>Periodontal evaluation</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Fillings</h3>
+            <p>Tooth-colored composite fillings to restore teeth damaged by decay while maintaining a natural appearance.</p>
+            <ul style="margin-top: 16px;">
+              <li>Mercury-free composite materials</li>
+              <li>Natural appearance</li>
+              <li>Durable and long-lasting</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Root Canal Therapy</h3>
+            <p>Gentle root canal treatment to save infected teeth and relieve pain.</p>
+            <ul style="margin-top: 16px;">
+              <li>Pain relief</li>
+              <li>Tooth preservation</li>
+              <li>Advanced techniques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <h2>Cosmetic Dentistry</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Teeth Whitening</h3>
+            <p>Professional whitening treatments for a brighter, more confident smile.</p>
+            <ul style="margin-top: 16px;">
+              <li>In-office whitening</li>
+              <li>Take-home kits</li>
+              <li>Safe and effective</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Porcelain Veneers</h3>
+            <p>Custom veneers to transform your smile with natural-looking results.</p>
+            <ul style="margin-top: 16px;">
+              <li>Custom fit</li>
+              <li>Stain resistant</li>
+              <li>Long-lasting</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Smile Makeovers</h3>
+            <p>Comprehensive treatment plans to achieve your dream smile.</p>
+            <ul style="margin-top: 16px;">
+              <li>Personalized treatment</li>
+              <li>Multiple procedures</li>
+              <li>Dramatic results</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <h2>Restorative Dentistry</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Dental Implants</h3>
+            <p>Permanent tooth replacement solutions that look, feel, and function like natural teeth.</p>
+            <ul style="margin-top: 16px;">
+              <li>Permanent solution</li>
+              <li>Natural appearance</li>
+              <li>Preserves jawbone</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Dental Crowns</h3>
+            <p>Custom crowns to restore damaged teeth and protect them from further damage.</p>
+            <ul style="margin-top: 16px;">
+              <li>Same-day crowns available</li>
+              <li>Natural appearance</li>
+              <li>Durable materials</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Bridges</h3>
+            <p>Replace missing teeth with custom bridges that restore function and appearance.</p>
+            <ul style="margin-top: 16px;">
+              <li>Replace multiple teeth</li>
+              <li>Restore chewing function</li>
+              <li>Prevent shifting</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Dentures</h3>
+            <p>Complete and partial dentures for patients with multiple missing teeth.</p>
+            <ul style="margin-top: 16px;">
+              <li>Custom fit</li>
+              <li>Natural appearance</li>
+              <li>Improved function</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <h2>Emergency Dental Care</h2>
+        <div class="card" style="max-width: 800px; margin: 0 auto;">
+          <h3>Same-Day Emergency Treatment</h3>
+          <p>Dental emergencies can happen anytime. We provide same-day emergency care to relieve pain and address urgent dental problems.</p>
+          
+          <div style="margin-top: 24px;">
+            <h4>Common Dental Emergencies:</h4>
+            <ul style="margin-top: 16px;">
+              <li>Severe toothache</li>
+              <li>Broken or cracked teeth</li>
+              <li>Lost fillings or crowns</li>
+              <li>Knocked-out teeth</li>
+              <li>Dental trauma</li>
+            </ul>
+          </div>
+          
+          <div style="text-align: center; margin-top: 32px;">
+            <a href="tel:+15125550911" class="btn btn-primary">Emergency Line: (512) 555-0911</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2>Ready to Schedule Your Appointment?</h2>
+          <p style="margin-bottom: 32px;">Contact us today to discuss your dental needs and schedule your visit.</p>
+          <a href="/contact" class="btn btn-primary">Book Your Appointment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout> 

@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.svelte';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Contact Us - 1460 Dental Studio" description="Contact 1460 Dental Studio in Georgetown, TX. Schedule your appointment today! Call (512) 555-0123.">
+  <Navigation client:load />
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Contact 1460 Dental Studio</h1>
+        <p>Schedule your appointment or get in touch with our Georgetown dental team.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you! Contact us to schedule your appointment or ask any questions about our dental services.</p>
+            
+            <div style="margin-top: 32px;">
+              <div class="card">
+                <h3>Office Information</h3>
+                <div style="margin-top: 16px;">
+                  <p><strong>Phone:</strong> <a href="tel:+15125550123">(512) 555-0123</a></p>
+                  <p><strong>Email:</strong> <a href="mailto:info@1460dental.com">info@1460dental.com</a></p>
+                  <p><strong>Address:</strong><br>
+                     1460 Main Street<br>
+                     Georgetown, TX 78628</p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <h3>Office Hours</h3>
+                <div style="margin-top: 16px;">
+                  <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
+                  <p><strong>Saturday:</strong> Closed</p>
+                  <p><strong>Sunday:</strong> Closed</p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <h3>Emergency Care</h3>
+                <div style="margin-top: 16px;">
+                  <p><strong>Emergency Line:</strong><br>
+                     <a href="tel:+15125550911">(512) 555-0911</a></p>
+                  <p><strong>Available:</strong> 24/7 for dental emergencies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h2>Schedule Appointment</h2>
+            <p>Fill out the form below and we'll contact you to schedule your appointment.</p>
+            
+            <form class="card" style="margin-top: 24px;">
+              <div style="margin-bottom: 20px;">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <label for="phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" class="form-input" required>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <label for="service" class="form-label">Service Interested In</label>
+                <select id="service" name="service" class="form-input">
+                  <option value="">Select a service</option>
+                  <option value="cleaning">Routine Cleaning</option>
+                  <option value="exam">Dental Exam</option>
+                  <option value="whitening">Teeth Whitening</option>
+                  <option value="implants">Dental Implants</option>
+                  <option value="cosmetic">Cosmetic Dentistry</option>
+                  <option value="emergency">Emergency Care</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <label for="preferred-date" class="form-label">Preferred Appointment Date</label>
+                <input type="date" id="preferred-date" name="preferred-date" class="form-input">
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-input" rows="4" placeholder="Tell us about your dental needs or any questions you have..."></textarea>
+              </div>
+              
+              <div style="margin-bottom: 20px;">
+                <label style="display: flex; align-items: flex-start; gap: 8px;">
+                  <input type="checkbox" required style="margin-top: 4px;">
+                  <span style="font-size: 14px;">I agree to receive communications from 1460 Dental Studio regarding my appointment and dental care.*</span>
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Request Appointment
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <h2>New Patients Welcome</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>First Visit</h3>
+            <p>Your first visit includes a comprehensive exam, digital X-rays, and consultation about your dental health and treatment options.</p>
+            <ul style="margin-top: 16px;">
+              <li>Comprehensive exam</li>
+              <li>Digital X-rays</li>
+              <li>Treatment consultation</li>
+              <li>Insurance verification</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>What to Bring</h3>
+            <p>Please bring these items to your first appointment to help us serve you better.</p>
+            <ul style="margin-top: 16px;">
+              <li>Insurance card</li>
+              <li>Photo ID</li>
+              <li>List of medications</li>
+              <li>Previous dental records</li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <h3>Payment Options</h3>
+            <p>We offer flexible payment options to make dental care affordable for everyone.</p>
+            <ul style="margin-top: 16px;">
+              <li>Insurance accepted</li>
+              <li>CareCredit financing</li>
+              <li>Payment plans available</li>
+              <li>Cash, check, credit cards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2>Ready to Get Started?</h2>
+          <p style="margin-bottom: 32px;">Call us today to schedule your appointment or if you have any questions about our services.</p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="tel:+15125550123" class="btn btn-primary">Call: (512) 555-0123</a>
+            <a href="mailto:info@1460dental.com" class="btn">Email Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout> 
