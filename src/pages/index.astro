@@ -1,4 +1,10 @@
 ---
+// Page metadata for CloudCannon
+const title = "Dentist in Georgetown | 1460 Dental Studio";
+const description = "Trusted Georgetown dentist offering compassionate, expert dental care for your whole family. Book your appointment today!";
+const hero_headline = "Your Georgetown Smile Experts";
+const hero_tagline = "Compassionate, expert dental care for your whole family";
+
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.svelte';
 import HeroSection from '../components/HeroSection.astro';
@@ -7,23 +13,71 @@ import AboutSection from '../components/AboutSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import Footer from '../components/Footer.astro';
 
-// Import data from CloudCannon editable files
+// Import global site data
 import siteData from '../../data/site.yml';
-import pageData from '../../data/pages.yml';
-
-// Get page content
-const pageContent = pageData.homepage;
 ---
 
-<BaseLayout title={pageContent.title} description={pageContent.description}>
+<BaseLayout title={title} description={description}>
   <Navigation client:load />
   
   <main>
-    <HeroSection />
+    <section class="hero">
+      <div class="container">
+        <h1>{hero_headline}</h1>
+        <p>{hero_tagline}</p>
+        <a href="/contact/" class="cta-button">Schedule Appointment</a>
+      </div>
+    </section>
+    
     <ServiceGrid />
     <AboutSection />
     <ContactSection />
   </main>
   
   <Footer />
-</BaseLayout> 
+</BaseLayout>
+
+<style>
+.hero {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background: white;
+  color: #2563eb;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+</style> 

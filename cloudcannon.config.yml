@@ -12,40 +12,62 @@ build:
   build_command: "npm run build"
   preview_command: "npm run preview"
 
-# Collections Configuration - Data-driven approach
+# Collections Configuration - Hybrid Approach
 collections_config:
+  pages:
+    path: src/pages
+    output: true
+    name: "Pages"
+    description: "Website pages with visual editing"
+    icon: "description"
+    _enabled_editors:
+      - visual
+      - content  
+      - source
+    add_options:
+      - name: "Add New Page"
+        schema: page
+        icon: "add"
+    schemas:
+      page:
+        name: "Standard Page"
+        description: "A standard website page"
+        icon: "description"
+    # Parser configuration for JavaScript frontmatter
+    parser: 
+      comment_parser: true
+    _inputs:
+      title:
+        type: text
+        label: "Page Title"
+        comment: "The main title for this page"
+      description:
+        type: textarea
+        label: "Meta Description"
+        comment: "SEO description for search engines"
+      hero_headline:
+        type: text
+        label: "Hero Headline"
+        comment: "Main headline displayed on the page"
+      hero_tagline:
+        type: textarea
+        label: "Hero Tagline"
+        comment: "Supporting text under the headline"
+
   data:
     path: data
     output: false
     name: "Site Data"
-    description: "Editable site data and content"
+    description: "Global site settings"
     icon: "settings"
     _enabled_editors:
       - data
-    _inputs:
-      title:
-        type: text
-        label: "Site Title"
-      description:
-        type: textarea
-        label: "Site Description"
-      phone:
-        type: text
-        label: "Phone Number"
-      email:
-        type: email
-        label: "Email Address"
 
-# Data Configuration  
+# Data Configuration for global settings
 data_config:
   site:
     path: data/site.yml
     name: "Site Settings"
-    _enabled_editors:
-      - data
-  pages:
-    path: data/pages.yml
-    name: "Page Content"
     _enabled_editors:
       - data
 
@@ -57,12 +79,12 @@ _inputs:
   description:
     type: textarea
     label: "Description"
-  headline:
+  hero_headline:
     type: text
-    label: "Headline"
-  tagline:
-    type: text
-    label: "Tagline"
+    label: "Hero Headline"
+  hero_tagline:
+    type: textarea
+    label: "Hero Tagline"
   phone:
     type: text
     label: "Phone Number"
@@ -70,23 +92,49 @@ _inputs:
   email:
     type: email
     label: "Email Address"
-  street:
-    type: text
-    label: "Street Address"
-  city:
-    type: text
-    label: "City"
-  state:
-    type: text
-    label: "State"
-  zip:
-    type: text
-    label: "ZIP Code"
+
+# Visual Editor Configuration
+_editables:
+  text:
+    bold: true
+    italic: true
+    underline: true
+    link: true
+    undo: true
+    redo: true
+  block:
+    format: p h1 h2 h3 h4 h5 h6
+    bold: true
+    italic: true
+    link: true
+    alignment: left center right
+    lists: true
+    undo: true
+    redo: true
+  content:
+    bold: true
+    italic: true
+    underline: true
+    link: true
+    format: p h1 h2 h3 h4 h5 h6
+    undo: true
+    redo: true
 
 # Editor Configuration
 _enabled_editors:
+  - visual
+  - content
   - data
   - source
+
+# Markup Configuration  
+markup:
+  md:
+    engine: markdown-it
+    options:
+      html: true
+      breaks: false
+      linkify: true
 
 # Paths Configuration
 paths:
@@ -100,4 +148,13 @@ locale: en-US
 
 # Asset Configuration
 uploads_dir: public/images
-site_url: https://1460dentalstudio.com 
+site_url: https://1460dentalstudio.com
+
+# Generator Configuration
+generator:
+  metadata:
+    markdown: markdown-it
+    markdown-it:
+      html: true
+      breaks: true
+      linkify: true 

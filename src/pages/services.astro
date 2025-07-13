@@ -1,29 +1,26 @@
 ---
-// CloudCannon frontmatter
+// Page metadata for CloudCannon
 const title = "Dental Services | 1460 Dental Studio";
 const description = "Comprehensive dental services in Georgetown, TX including general dentistry, cosmetic dentistry, dental implants, and emergency care.";
-const layout = "BaseLayout";
+const hero_headline = "Our Dental Services";
+const hero_tagline = "Comprehensive dental care for you and your family in Georgetown, Texas.";
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.svelte';
 import Footer from '../components/Footer.astro';
 
-// Import data from CloudCannon editable files
+// Import global site data
 import siteData from '../../data/site.yml';
-import pageData from '../../data/pages.yml';
-
-// Get page content
-const pageContent = pageData.services;
 ---
 
-<BaseLayout title={pageContent.title} description={pageContent.description}>
+<BaseLayout title={title} description={description}>
   <Navigation client:load />
   
   <main>
     <section class="hero">
       <div class="container">
-        <h1>{pageContent.hero.headline}</h1>
-        <p>{pageContent.hero.tagline}</p>
+        <h1>{hero_headline}</h1>
+        <p>{hero_tagline}</p>
       </div>
     </section>
     
