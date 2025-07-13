@@ -2,7 +2,6 @@
 title: "Dentist in Georgetown | 1460 Dental Studio"
 description: "Trusted Georgetown dentist offering compassionate, expert dental care for your whole family. Book your appointment today!"
 layout: "BaseLayout"
----
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.svelte';
@@ -11,6 +10,7 @@ import ServiceGrid from '../components/ServiceGrid.astro';
 import AboutSection from '../components/AboutSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import Footer from '../components/Footer.astro';
+---
 
 <BaseLayout title={title} description={description}>
   <Navigation client:load />

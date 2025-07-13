@@ -15,12 +15,4 @@ export default defineConfig({
   },
   site: 'https://1460dentalstudio.com',
   compressHTML: true,
-  vite: {
-    optimizeDeps: {
-      include: ['@skeletonlabs/skeleton']
-    },
-    ssr: {
-      noExternal: ['@skeletonlabs/skeleton']
-    }
-  }
 }); 
