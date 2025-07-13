@@ -1,10 +1,7 @@
-import { join } from 'path'
-import { skeleton } from '@skeletonlabs/tw-plugin'
-
 export default {
   content: [
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-    join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
+    './node_modules/@skeletonlabs/skeleton/**/*.{html,js,svelte,ts}'
   ],
   theme: {
     extend: {
@@ -40,10 +37,6 @@ export default {
       },
     },
   },
-  plugins: [
-    skeleton({
-      themes: { preset: [ "skeleton" ] }
-    })
-  ],
+  plugins: [],
   darkMode: 'class',
 }; 

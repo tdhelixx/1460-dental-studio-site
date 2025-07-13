@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { AppBar, popup, type PopupSettings } from '@skeletonlabs/skeleton';
+  import { popup, type PopupSettings } from '@skeletonlabs/skeleton';
   
   let isMenuOpen = false;
   
@@ -50,62 +50,63 @@
   ];
 </script>
 
-<AppBar>
-  <svelte:fragment slot="lead">
-    <a href="/" class="flex items-center space-x-2">
-      <img src="/logo.png" alt="1460 Dental Studio" class="h-8 w-auto" />
-      <span class="text-xl font-bold text-primary-700">1460 Dental Studio</span>
-    </a>
-  </svelte:fragment>
-  
-  <svelte:fragment slot="trail">
-    <!-- Desktop Navigation -->
-    <div class="hidden lg:flex items-center space-x-6">
-      <a href="/" class="nav-link">Home</a>
+<header class="bg-surface-50-900-token border-b border-surface-200-700-token">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="/logo.png" alt="1460 Dental Studio" class="h-8 w-auto" />
+        <span class="text-xl font-bold text-primary-700">1460 Dental Studio</span>
+      </div>
       
-      <!-- Services Dropdown -->
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-6">
+        <a href="/" class="nav-link">Home</a>
+        
+        <!-- Services Dropdown -->
+        <button
+          class="nav-link"
+          use:popup={servicesPopup}
+        >
+          Services
+        </button>
+        
+        <!-- About Dropdown -->
+        <button
+          class="nav-link"
+          use:popup={aboutPopup}
+        >
+          About
+        </button>
+        
+        <!-- Patients Dropdown -->
+        <button
+          class="nav-link"
+          use:popup={patientsPopup}
+        >
+          For Patients
+        </button>
+        
+        <a href="/contact/" class="nav-link">Contact</a>
+        
+        <!-- CTA Button -->
+        <a href="/contact/" class="btn variant-filled-primary">
+          Book Appointment
+        </a>
+      </nav>
+      
+      <!-- Mobile Menu Button -->
       <button
-        class="nav-link"
-        use:popup={servicesPopup}
+        class="lg:hidden btn-icon variant-filled"
+        on:click={() => isMenuOpen = !isMenuOpen}
       >
-        Services
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
       </button>
-      
-      <!-- About Dropdown -->
-      <button
-        class="nav-link"
-        use:popup={aboutPopup}
-      >
-        About
-      </button>
-      
-      <!-- Patients Dropdown -->
-      <button
-        class="nav-link"
-        use:popup={patientsPopup}
-      >
-        For Patients
-      </button>
-      
-      <a href="/contact/" class="nav-link">Contact</a>
-      
-      <!-- CTA Button -->
-      <a href="/contact/" class="btn variant-filled-primary">
-        Book Appointment
-      </a>
     </div>
-    
-    <!-- Mobile Menu Button -->
-    <button
-      class="lg:hidden btn-icon variant-filled"
-      on:click={() => isMenuOpen = !isMenuOpen}
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </svelte:fragment>
-</AppBar>
+  </div>
+</header>
 
 <!-- Services Popup -->
 <div class="card p-4 w-48 shadow-xl" data-popup="servicesPopup">
