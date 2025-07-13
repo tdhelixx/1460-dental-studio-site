@@ -1,0 +1,39 @@
+# Site Settings for CloudCannon
+title: "1460 Dental Studio"
+description: "Trusted Georgetown dentist offering compassionate, expert dental care for your whole family."
+url: "https://1460dentalstudio.com"
+email: "1460dentalstudio@gmail.com"
+phone: "(512) 763-5774"
+address: 
+  street: "2951 FM1460 #101"
+  city: "Georgetown"
+  state: "TX"
+  zip: "78626"
+
+# Business Hours
+hours:
+  monday: "8:00 AM - 4:00 PM"
+  tuesday: "8:00 AM - 4:00 PM"
+  wednesday: "8:00 AM - 4:00 PM"
+  thursday: "8:00 AM - 4:00 PM"
+  friday: "Closed"
+  saturday: "Closed"
+  sunday: "Closed"
+
+# Social Media Links
+social:
+  instagram: "https://www.instagram.com/1460dentalstudio/"
+  yelp: "https://www.yelp.com/biz/1460-dental-studio-georgetown"
+  google: "https://maps.app.goo.gl/WrYNaoQNeyDBXfLTA"
+
+# SEO Settings
+seo:
+  og_image: "/images/og-image.jpg"
+  twitter_handle: "@1460dental"
+  
+# Practice Information
+practice:
+  established: "2009"
+  doctor: "Dr. Abdallah Ifraitekh"
+  years_experience: "24"
+  university: "Boston University Henry M. Goldman School of Dental Medicine" 

@@ -1,17 +1,21 @@
 ---
+title: "About | 1460 Dental Studio"
+description: "Learn more about our experienced Georgetown dental team and commitment to exceptional care. Meet your local smile experts today!"
+layout: "BaseLayout"
+---
+
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.svelte';
 import Footer from '../components/Footer.astro';
----
 
-<BaseLayout title="About Us - 1460 Dental Studio" description="Learn about our experienced dental team and state-of-the-art facility in Georgetown, TX.">
+<BaseLayout title={title} description={description}>
   <Navigation client:load />
   
   <main>
     <section class="hero">
       <div class="container">
-        <h1>About 1460 Dental Studio</h1>
-        <p>Your trusted Georgetown dental team providing exceptional care since 2009.</p>
+        <h1>About Us</h1>
+        <p>Your trusted Georgetown dental team providing exceptional care.</p>
       </div>
     </section>
     
@@ -19,33 +23,71 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="grid grid-2">
           <div>
-            <h2>Our Story</h2>
-            <p>1460 Dental Studio has been serving the Georgetown community for over 15 years. We believe that everyone deserves access to high-quality dental care in a comfortable, welcoming environment.</p>
-            
-            <p>Our team of experienced professionals is dedicated to providing comprehensive dental services using the latest technology and techniques. We take the time to understand each patient's unique needs and develop personalized treatment plans.</p>
-            
-            <h3>Our Mission</h3>
-            <p>To provide exceptional dental care that improves our patients' oral health, overall well-being, and quality of life. We are committed to creating positive dental experiences in a comfortable, state-of-the-art environment.</p>
+            <h3>About 1460 Dental Studio</h3>
+            <h2>Welcome to a Different Kind of Dental Experience</h2>
+            <p>At 1460 Dental Studio, we're committed to providing transparent, personalized dental care where patients are never treated as just a number. Our practice combines high-quality, conservative dentistry with a natural, spa-like environment designed to make every visit comfortable and stress-free.</p>
           </div>
-          
           <div>
-            <h3>Our Values</h3>
-            <ul style="list-style: none; padding: 0;">
-              <li style="margin-bottom: 16px;">
-                <strong>Compassionate Care:</strong> We treat every patient with kindness and understanding
-              </li>
-              <li style="margin-bottom: 16px;">
-                <strong>Excellence:</strong> We maintain the highest standards in everything we do
-              </li>
-              <li style="margin-bottom: 16px;">
-                <strong>Innovation:</strong> We use the latest technology for better outcomes
-              </li>
-              <li style="margin-bottom: 16px;">
-                <strong>Education:</strong> We empower patients with knowledge about their oral health
-              </li>
-              <li style="margin-bottom: 16px;">
-                <strong>Community:</strong> We are proud to serve Georgetown and surrounding areas
-              </li>
+            <img 
+              src="/images/about-dental-office.jpg" 
+              alt="Modern dental office with comfortable seating and advanced technology"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h3>Meet Your Doctor</h3>
+            <h2>Dr. Abdallah Ifraitekh</h2>
+            <p>With 24 years of experience and extensive training from Boston University Henry M. Goldman School of Dental Medicine, Dr. Ifraitekh brings exceptional expertise to Georgetown families. His comprehensive background in oral surgery, endodontics, prosthodontics, periodontics, dental implants, and laser dentistry ensures you receive the highest standard of care under one roof.</p>
+            
+            <p>Dr. Ifraitekh believes in keeping things simple and honest. He takes pride in recommending only what's truly best for you. He takes the time to walk you through your treatment, making sure you feel informed and confident, so you can make well-informed decisions about your care. His goal is to ensure you understand the 'why' behind every decision.</p>
+            
+            <p>When he's not at the office, he's all about family time with his wife and four kids, DIY house projects, trying his hand at carpentry, and hunting down the best food spots around Georgetown, Round Rock and Austin.</p>
+          </div>
+          <div>
+            <img 
+              src="/images/team/dr-abdallah-ifraitekh.jpg" 
+              alt="Dr. Abdallah Ifraitekh"
+              class="team-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <img 
+              src="/images/office-interior.jpg" 
+              alt="Modern dental office interior with comfortable patient areas"
+              class="hero-img"
+            />
+          </div>
+          <div>
+            <h3>Your First Visit</h3>
+            <h2>What You Can Expect</h2>
+            <p>Your first visit with us is designed to be comprehensive yet comfortable. We'll take the time to learn about your dental history, concerns, and goals while thoroughly assessing your current oral health. Our goal is to create a personalized care plan that aligns with your needs and preferences.</p>
+            
+            <h4>Your Experience</h4>
+            <p>When you arrive at our office, you'll be greeted warmly and invited to enjoy our comfortable reception area, complete with refreshments. During your appointment, Dr. Ifraitekh will conduct a thorough examination and take time to discuss his findings and recommendations.</p>
+            
+            <p>Then our team will go over everything you need to know to feel confident in your care. Expect full transparency and a team that works with you to get care that fits your budget, lifestyle, and schedule.</p>
+            
+            <h4>What to Bring</h4>
+            <ul>
+              <li>Your completed new patient forms (available digitally prior to your appointment)</li>
+              <li>Your dental insurance card (if applicable)</li>
+              <li>A list of any medications you're currently taking</li>
+              <li>Any recent dental X-rays (if available)</li>
+              <li>Questions or concerns you'd like to discuss with Dr. Ifraitekh</li>
             </ul>
           </div>
         </div>
@@ -54,29 +96,36 @@ import Footer from '../components/Footer.astro';
     
     <section class="section">
       <div class="container">
-        <h2>Meet Our Team</h2>
+        <h2>Modern Comfort and Advanced Technology</h2>
+        <p>We've created an environment that combines the comfort of a spa with the precision of modern dental technology. Here's how we treat your smile!</p>
+        
         <div class="grid grid-3">
           <div class="card">
-            <h3>Dr. Sarah Smith</h3>
-            <p><strong>Lead Dentist & Practice Owner</strong></p>
-            <p>Dr. Smith has over 15 years of experience in general and cosmetic dentistry. She graduated from UT Health San Antonio Dental School and is committed to continuing education.</p>
+            <h3>Comfort Amenities</h3>
+            <p>Sit back and enjoy our curated comforts, including a <strong>refreshing beverage station, noise-canceling headphones</strong> to block out noise, <strong>flat-screen TVs for entertainment</strong>, and <strong>warm towels for a spa-like touch</strong>.</p>
           </div>
           
           <div class="card">
-            <h3>Dr. Michael Johnson</h3>
-            <p><strong>Associate Dentist</strong></p>
-            <p>Dr. Johnson specializes in restorative dentistry and dental implants. He brings 10 years of experience and a gentle approach to patient care.</p>
+            <h3>Digital X-Rays</h3>
+            <p>Our digital X-ray technology provides immediate, high-resolution images while reducing radiation exposure by <strong>up to 90% compared to traditional film X-rays</strong>.</p>
           </div>
           
           <div class="card">
-            <h3>Lisa Martinez, RDH</h3>
-            <p><strong>Lead Dental Hygienist</strong></p>
-            <p>Lisa has been with our practice for 8 years and is passionate about preventive care and patient education. She makes every cleaning comfortable and thorough.</p>
+            <h3>Digital Experience</h3>
+            <p>Our digital patient forms and records system <strong>streamlines your check-in process</strong> and makes it easy to get started.</p>
           </div>
         </div>
-        
-        <div style="text-align: center; margin-top: 40px;">
-          <a href="/contact" class="btn btn-primary">Schedule Your Appointment</a>
+      </div>
+    </section>
+    
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Experience Transparent, Personalized Dental Care in Georgetown</h2>
+          <div class="cta-actions">
+            <a href="/contact" class="btn btn-primary">Schedule Today</a>
+            <a href="tel:+15127635774" class="btn">Call (512) 763-5774</a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,118 +1,155 @@
-# CloudCannon Configuration for Astro + Skeleton
+# CloudCannon Configuration for 1460 Dental Studio
 source: src
 public_path: /
 output_dir: dist
 build_dir: dist
 base_url: /
 
-# Collections
+# Collections Configuration
 collections_config:
   pages:
     path: src/pages
     output: true
     filter: strict
-    name: Pages
+    name: "Pages"
+    description: "Main website pages"
+    icon: "description"
     _enabled_editors:
       - visual
       - content
+      - source
+    add_options:
+      - name: "Add New Page"
+        schema: page
+        icon: "add"
     schemas:
-      default:
-        path: schemas/page.md
-  
-  services:
-    path: src/content/services
-    output: true
-    name: Services
-    _enabled_editors:
-      - visual
-      - content
-    schemas:
-      default:
-        path: schemas/service.md
-  
-  team:
-    path: src/content/team
-    output: true
-    name: Team Members
-    _enabled_editors:
-      - visual
-      - content
-    schemas:
-      default:
-        path: schemas/team-member.md
+      page:
+        name: "Standard Page"
+        description: "A standard website page"
+        icon: "description"
+        _inputs:
+          title:
+            type: text
+            label: "Page Title"
+            comment: "The main title for this page"
+          description:
+            type: textarea
+            label: "Meta Description"
+            comment: "SEO description for search engines"
+          layout:
+            type: select
+            label: "Page Layout"
+            options:
+              values:
+                - "BaseLayout"
+              default: "BaseLayout"
+            hidden: true
 
-# Data files
+# Data Configuration  
 data_config:
-  navigation:
-    path: src/data/navigation.yml
   site_settings:
     path: src/data/site.yml
+    name: "Site Settings"
+    _enabled_editors:
+      - data
 
-# Input types
+# Global Input Configuration
 _inputs:
   title:
     type: text
-    label: Page Title
+    label: "Title"
+    comment: "The page title"
   description:
     type: textarea
-    label: Meta Description
+    label: "Description" 
+    comment: "Page description for SEO"
   image:
     type: image
-    label: Featured Image
+    label: "Image"
+    comment: "Featured image"
   content:
-    type: markdown
-    label: Content
-  services:
-    type: array
-    label: Services
-  testimonials:
-    type: array
-    label: Testimonials
+    type: rich_text
+    label: "Content"
+    comment: "Main page content"
 
-# Editor configuration
+# Editor Configuration
 _enabled_editors:
   - visual
   - content
   - source
 
-# Build settings
+# Build Configuration
 build:
   output_dir: dist
+  install_command: "npm install"
+  build_command: "npm run build"
+  preview_command: "npm run preview"
   environment_variables:
-    CLOUDCANNON_SITE_ID: 1460-dental-astro
+    NODE_ENV: production
 
-# Markdown configuration
+# Generator Configuration  
+generator:
+  metadata:
+    markdown: markdown-it
+    markdown-it:
+      html: true
+      breaks: true
+      linkify: true
+
+# Markdown Configuration
 markdown:
-  engine: goldmark
-  goldmark:
-    renderer:
-      unsafe: true
+  engine: markdown-it
+  markdown-it:
+    html: true
+    breaks: true
+    linkify: true
+    typographer: true
 
-# Site settings
-timezone: America/Chicago
-locale: en-US
-
-# Visual editor
+# Visual Editor Configuration
 _editables:
   text:
+    format: p h1 h2 h3 h4 h5 h6
     bold: true
     italic: true
+    underline: true
+    strike: true
     link: true
-    format: p h1 h2 h3 h4 h5 h6
+    subscript: true
+    superscript: true
+    code: true
+    undo: true
+    redo: true
   block:
-    format: p h1 h2 h3 h4 h5 h6
+    format: p h1 h2 h3 h4 h5 h6 blockquote
     bold: true
     italic: true
+    underline: true
+    strike: true
     link: true
-    alignment: left center right
+    alignment: left center right justify
     lists: true
+    indent: true
+    outdent: true
     image: true
     embed: true
     table: true
+    horizontalrule: true
+    undo: true
+    redo: true
+    removeformat: true
+    copyformatting: true
 
-# SEO and meta
+# Site Configuration
+timezone: America/Chicago
+locale: en-US
+
+# SEO Configuration
 seo:
   title: "1460 Dental Studio"
-  description: "Trusted Georgetown dentist offering compassionate, expert dental care for your whole family."
+  description: "Learn more about our experienced Georgetown dental team and commitment to exceptional care. Meet your local smile experts today!"
   image: /images/og-image.jpg
-  url: https://1460dentalstudio.com 
+  url: https://1460dentalstudio.com
+
+# Asset Configuration
+uploads_dir: public/images
+site_url: https://1460dentalstudio.com 
