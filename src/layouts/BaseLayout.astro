@@ -1,5 +1,6 @@
 ---
-import '@skeletonlabs/skeleton/styles/all.css';
+import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
+import '@skeletonlabs/skeleton/styles/skeleton.css';
 import '../app.css';
 
 export interface Props {
@@ -37,10 +38,5 @@ const { title, description = "Trusted Georgetown dentist offering compassionate,
   <div id="app" class="relative flex flex-col min-h-screen">
     <slot />
   </div>
-  
-  <script>
-    import { initializeSkeletonUI } from '@skeletonlabs/skeleton';
-    initializeSkeletonUI();
-  </script>
 </body>
 </html> 

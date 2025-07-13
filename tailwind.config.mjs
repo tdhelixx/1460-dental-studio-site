@@ -1,10 +1,10 @@
-import { skeleton } from '@skeletonlabs/skeleton/plugin';
-import * as themes from '@skeletonlabs/skeleton/themes';
+import { join } from 'path'
+import { skeleton } from '@skeletonlabs/tw-plugin'
 
 export default {
   content: [
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-    './node_modules/@skeletonlabs/skeleton/**/*.{html,js,svelte,ts}',
+    join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
   ],
   theme: {
     extend: {
@@ -42,7 +42,15 @@ export default {
   },
   plugins: [
     skeleton({
-      themes: [themes.cerberus, themes.rose]
-    })
+      themes: {
+        preset: [
+          {
+            name: 'dental',
+            enhancements: true,
+          },
+        ],
+      },
+    }),
   ],
+  darkMode: 'class',
 }; 

@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { AppBar, button, popup, type PopupSettings } from '@skeletonlabs/skeleton';
-  import { onMount } from 'svelte';
+  import { AppBar, popup, type PopupSettings } from '@skeletonlabs/skeleton';
   
   let isMenuOpen = false;
   
@@ -91,14 +90,14 @@
       <a href="/contact/" class="nav-link">Contact</a>
       
       <!-- CTA Button -->
-      <a href="/contact/" class="btn-primary">
+      <a href="/contact/" class="btn variant-filled-primary">
         Book Appointment
       </a>
     </div>
     
     <!-- Mobile Menu Button -->
     <button
-      class="lg:hidden"
+      class="lg:hidden btn-icon variant-filled"
       on:click={() => isMenuOpen = !isMenuOpen}
     >
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +113,7 @@
     <ul>
       {#each services as service}
         <li>
-          <a href={service.href} class="nav-link block py-2 hover:bg-primary-50 dark:hover:bg-primary-900/20 rounded px-2">
+          <a href={service.href} class="nav-link block py-2 hover:variant-soft-primary rounded px-2">
             {service.name}
           </a>
         </li>
@@ -130,7 +129,7 @@
     <ul>
       {#each aboutLinks as link}
         <li>
-          <a href={link.href} class="nav-link block py-2 hover:bg-primary-50 dark:hover:bg-primary-900/20 rounded px-2">
+          <a href={link.href} class="nav-link block py-2 hover:variant-soft-primary rounded px-2">
             {link.name}
           </a>
         </li>
@@ -146,7 +145,7 @@
     <ul>
       {#each patientLinks as link}
         <li>
-          <a href={link.href} class="nav-link block py-2 hover:bg-primary-50 dark:hover:bg-primary-900/20 rounded px-2">
+          <a href={link.href} class="nav-link block py-2 hover:variant-soft-primary rounded px-2">
             {link.name}
           </a>
         </li>
@@ -159,10 +158,10 @@
 <!-- Mobile Menu -->
 {#if isMenuOpen}
 <div class="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50" on:click={() => isMenuOpen = false}>
-  <div class="absolute right-0 top-0 h-full w-64 bg-surface-100 dark:bg-surface-800 shadow-xl">
+  <div class="absolute right-0 top-0 h-full w-64 bg-surface-100-800-token shadow-xl">
     <div class="flex flex-col p-4 space-y-4">
       <button 
-        class="self-end text-xl"
+        class="self-end text-xl btn-icon variant-filled"
         on:click={() => isMenuOpen = false}
       >
         ×
@@ -199,7 +198,7 @@
       
       <a href="/contact/" class="nav-link block py-2">Contact</a>
       
-      <a href="/contact/" class="btn-primary text-center">
+      <a href="/contact/" class="btn variant-filled-primary text-center">
         Book Appointment
       </a>
     </div>
