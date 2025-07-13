@@ -42,15 +42,8 @@ export default {
   },
   plugins: [
     skeleton({
-      themes: {
-        preset: [
-          {
-            name: 'dental',
-            enhancements: true,
-          },
-        ],
-      },
-    }),
+      themes: { preset: [ "skeleton" ] }
+    })
   ],
   darkMode: 'class',
 }; 
