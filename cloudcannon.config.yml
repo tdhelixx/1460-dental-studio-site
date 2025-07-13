@@ -1,22 +1,48 @@
+_collection_groups:
+- collections:
+  - all_pages
+  heading: Content Management
+- collections:
+  - services
+  - service_categories
+  - patient_pages
+  - team_members
+  heading: By Category
 _inputs:
   description:
     type: textarea
   title:
     type: text
 collections_config:
-  pages:
+  all_pages:
     filter: strict
+    glob:
+    - '**/*.html'
+    - '!_*/**'
+    name: All Pages
     output: true
     parse_branch_index: true
     path: .
+  patient_pages:
+    name: Patient Pages
+    output: true
+    parse_branch_index: true
+    path: for-patients
   service_categories:
     name: Service Categories
     output: true
-    path: service-categories_*
+    parse_branch_index: true
+    path: service-categories
   services:
     name: Services
     output: true
-    path: services_*
+    parse_branch_index: true
+    path: services
+  team_members:
+    name: Team Members
+    output: true
+    parse_branch_index: true
+    path: team-members
 data_config:
   navigation:
     path: _data/navigation.yml
